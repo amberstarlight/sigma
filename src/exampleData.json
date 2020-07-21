@@ -1,0 +1,46 @@
+{
+  "currentPath":"dataStore/",
+  "items": [
+      {
+          "type": "directory",
+          "name": "images",
+          "children": 12,
+          "dateCreated": "1578032594746"
+      },
+      {
+        "type": "directory",
+        "name": "config",
+        "children": 4,
+        "dateCreated": "1578032564000"
+      },
+      {
+        "type": "file",
+        "name": "funny_cat.png",
+        "fileinfo": {
+          "dateCreated": "1584531834000",
+          "lastModified": "1595356287797",
+          "mime": "image/png",
+          "size": 1024
+        }
+      },
+      {
+          "type": "directory",
+          "sym-link": true,
+          "name": "cool-folder-link",
+          "children": 10,
+          "dateCreated": "1595000000"
+      },
+      {
+          "type": "file",
+          "sym-link": true,
+          "name": "cool-link",
+          "fileinfo": {
+            "dateCreated": "1595200411",
+            "lastModified": "1595356407",
+            "mime": "image/png",
+            "size": 2773942
+          }
+      }
+  ]
+}
+
