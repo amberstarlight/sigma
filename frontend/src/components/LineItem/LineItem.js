@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './LineItem.css';
 
 import directoryIcon from '../../images/dir.png';
@@ -14,9 +15,9 @@ import Input from '../Input/Input.js';
 // each line item should be clickable: directories take you into that folder, and files take you directly to the file (initiating a download in most browsers?)
 
 const iconLookup = {
-  "directory": directoryIcon,
-  "file": fileIcon
-}
+  'directory': directoryIcon,
+  'file': fileIcon
+};
 
 function humanReadableFilesize(filesize) {
   const power1024 = pow => Math.pow(1024, pow);
@@ -30,17 +31,17 @@ function humanReadableFilesize(filesize) {
 function LineItem({item}) {
 
   let itemDescription;
-  if (item.type === "directory") {
+  if (item.type === 'directory') {
     itemDescription = (
       <>
         <p>{item.children} items</p>
-        <p>{(new Date(parseInt(item.dateCreated))).toLocaleString("en-GB")}</p>
+        <p>{(new Date(parseInt(item.dateCreated))).toLocaleString('en-GB')}</p>
       </>
     );
   } else {
     itemDescription = (
       <>
-        <p>{(new Date(parseInt(item.fileinfo.lastModified))).toLocaleString("en-GB")}</p>
+        <p>{(new Date(parseInt(item.fileinfo.lastModified))).toLocaleString('en-GB')}</p>
         <p>{humanReadableFilesize(item.fileinfo.size)}</p>
       </>);
   }
@@ -50,12 +51,16 @@ function LineItem({item}) {
       <Input type="checkbox"></Input>
       <img
         src={iconLookup[item.type]}
-        alt={"file"}
+        alt={'file'}
       />
       <a href="#test">{item.name}</a>
       {itemDescription}
     </div>
-  )
+  );
+}
+
+LineItem.propTypes = {
+  item: PropTypes.object
 };
 
 export default LineItem;

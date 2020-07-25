@@ -4,20 +4,20 @@ import '@testing-library/jest-dom/extend-expect';
 import LineItem from './LineItem.js';
 
 const exampleDirectory = {
-  "type": "directory",
-  "name": "images",
-  "children": 12,
-  "dateCreated": "1578032594746"
+  'type': 'directory',
+  'name': 'images',
+  'children': 12,
+  'dateCreated': '1578032594746'
 };
 
 const exampleFile = {
-  "type": "file",
-  "name": "funny_cat.png",
-  "fileinfo": {
-    "dateCreated": "1584531834000",
-    "lastModified": "1595356287797",
-    "mime": "image/png",
-    "size": 1024
+  'type': 'file',
+  'name': 'funny_cat.png',
+  'fileinfo': {
+    'dateCreated': '1584531834000',
+    'lastModified': '1595356287797',
+    'mime': 'image/png',
+    'size': 1024
   }
 };
 
@@ -29,7 +29,7 @@ describe('render a line item', () => {
     expect(screen.getByRole('link')).toHaveTextContent('images');
     expect(screen.getAllByRole('img').length).toStrictEqual(1);
     expect(screen.getByText('03/01/2020, 06:23:14')).toBeInTheDocument();
-    expect(screen.getByText("12 items")).toBeInTheDocument();
+    expect(screen.getByText('12 items')).toBeInTheDocument();
   });
   
   test('render file line item correctly', () => {

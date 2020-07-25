@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Input.css';
 
 function Input(props) {
@@ -10,7 +11,12 @@ function Input(props) {
         {...props}
       ></input>
     </>
-  )
+  );
+}
+
+Input.propTypes = {
+  label: PropTypes.string,
+  id: PropTypes.string
 };
 
 export default Input;

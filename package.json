@@ -1,0 +1,14 @@
+{
+  "name": "sigma",
+  "version": "1.0.0",
+  "repository": "git@github.com:amberstarlight/sigma.git",
+  "author": "Amber Holly <amber@amber.vision>",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-react": "^7.20.3"
+  },
+  "scripts": {
+    "lint": "npx eslint ."
+  }
+}
