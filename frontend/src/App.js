@@ -5,6 +5,7 @@ import FileList from './components/FileList/FileList';
 const exampleJSON = require("./exampleData.json");
 
 function App() {
+
   return (
     <>
     <h2>{exampleJSON.currentPath}</h2>
